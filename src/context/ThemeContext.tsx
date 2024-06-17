@@ -1,28 +1,22 @@
-"use client";
-import { createContext, useState } from 'react';
 
-type ModeType = "light" | "dark";
-type ThemeContextType = {
-    mode: ModeType;
-    toggle: () => void;
-}
 
-interface ChildrenProps {
-    children: React.ReactNode;
-}
+// import { createContext, useState } from "react";
 
-export const ThemeContext = createContext<ThemeContextType>({mode: "light", toggle: () => {}});
+// export const ThemeContext = createContext({
+//     isDarkTheme: false,
+//     toggleTheme: () => {}
+// })
 
-export const ThemeProvider = ({ children }: ChildrenProps) => {
-    const [mode, setMode] = useState<ModeType>("dark");
+// const ThemeProvider: React.FC = ({ children }) => {
+//     const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-    const toggle = (): void => {
-        setMode((prev) => (prev === "dark" ? "light" : "dark"));
-    };
+//     const toggleTheme = (): void => {
+//         setIsDarkTheme(!isDarkTheme);
+//     }
 
-    return (
-        <ThemeContext.Provider value={{ mode, toggle }}>
-            { children }
-        </ThemeContext.Provider>
-    )
-}
+//     return (
+//         <ThemeContext.Provider value={{isDarkTheme, toggleTheme}}>
+//             { children }
+//         </ThemeContext.Provider>
+//     )
+// }

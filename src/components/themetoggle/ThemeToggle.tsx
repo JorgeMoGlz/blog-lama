@@ -1,11 +1,12 @@
+"use client";
 import { useContext } from 'react';
 import styles from './themetoggle.module.css';
 import Image from 'next/image';
-import { ThemeContext } from '@/context/ThemeContext';
+// import { ThemeContext } from '@/context/ThemeContext';
 
 export const ThemeToggle = () => {
-    const { mode } = useContext(ThemeContext);
-    console.log(mode);
+    // const { isDarkTheme } = useContext(ThemeContext);
+    // console.log(isDarkTheme);
 
     return (
         <div className={styles.container}>

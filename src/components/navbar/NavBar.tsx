@@ -17,9 +17,12 @@ export const NavBar = () => {
             <div className={styles.logo}>Lama blog</div>
             <div className={styles.links}>
                 <ThemeToggle />
-                <Link href="/homepage">Homepage</Link>
-                <Link href="/contact">Contact</Link>
-                <Link href="/about">About</Link>
+                    <Link className={styles.link} 
+                        href="/homepage">Homepage</Link>
+                    <Link className={styles.link} 
+                        href="/contact">Contact</Link>
+                    <Link className={styles.link} 
+                        href="/about">About</Link>
                 <AuthLinks />
             </div>
         </div>
